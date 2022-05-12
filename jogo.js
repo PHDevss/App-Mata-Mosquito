@@ -2,7 +2,20 @@ let altura = window.innerHeight
 let largura = window.innerWidth
 let vidas = 1
 let tempo = 10
-
+let criaMosquitoTempo = 1500
+let nivel = window.location.search.replace('?','')
+switch(nivel) {
+    case 'normal':
+        criaMosquitoTempo = 1500
+        break;
+    case 'dificil':
+        criaMosquitoTempo = 1000
+        break;
+    case 'chucknorris':
+        criaMosquitoTempo = 750
+        break;
+}
+console.log(nivel)
 function ajustaTamanhoPalcoJogo() {
     altura = window.innerHeight
     largura = window.innerWidth
